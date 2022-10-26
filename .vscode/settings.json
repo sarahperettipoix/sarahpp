@@ -1,0 +1,7 @@
+{
+    "simpleBrowser.focusLockIndicator.enabled": true,
+    "debug.javascript.defaultRuntimeExecutable": {
+    
+        "pwa-node": "node"
+    }
+}
