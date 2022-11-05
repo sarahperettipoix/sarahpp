@@ -1,10 +1,13 @@
-<!--index.html is always the first file chosen. it is hence necessary to make an index.html page so that you always end up on this page first.-->
+<!--index.html is always the first file chosen. 
+    it is hence necessary to make an index.html page so that you always end up on this page first.-->
 <!--necessary thngs in a correct html document
     prologue
     <head><body>   
     </body></head> 
 to get a typical correct html doctype type in ! and follow it by a tabulation-->
 <!--warning Capital letters in "code" are accepted in html but not in css or js-->
+
+<!--get your doctype written in a second jsut type "!"" and "tab"-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,19 +21,84 @@ to get a typical correct html doctype type in ! and follow it by a tabulation-->
             color:red
         }
     </style>
+    <link rel="stylesheet" href="css_lesson2.css">
+    <!--or u can also make a lnk to another sheet-->
+    <script src="jstest.js"> 
+     //either follow the link or type in ur js here  
+    </script> 
 </head>
 <!--headings 1 to 6 (biggest to smallest) unimportant considering css-->
 <body>
     <h1>heading 1</h1>
     <!--in french these groups are called "balises"-->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sit culpa incidunt neque asperiores consequuntur libero debitis totam nobis adipisci deleniti harum dignissimos maiores, voluptates omnis nostrum. <div></div> Explicabo, quisquam iure! <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, nam. Nam magnam aspernatur illo earum fugit quidem. <span>Animi</span> quibusdam iure facilis aperiam voluptatibus necessitatibus, labore in deleniti enim a error.</p>
-    <a href ="https://www.unil.ch/index.html"> lien vers L'unil</a>
+    <div class="maintext"> 
+        <!-- write down a class ="" to make specific type of balises taht  can  be modified in one go with css (.maintext{})-->
+        <input type="text">
+        <form action=""> <!--put in site here""-->
+        <div>
+        	<label>Last Name</label>
+        	<input type="text" name="last name" inputholder="Please enter input">
+        </div>
+        <div>
+            <label>Color</label>
+            <select>
+                <!-- value is what is sent to the interested server/party (if different language) -->
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="green">green</option>
+            </select>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quisquam iure! <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<span>Animi</span> quibusdam iure facilis aperiam voluptatibus necessitatibus, labore in deleniti enim a error.</p>
+        <a href ="https://www.unil.ch/index.html"> lien vers L'unil</a>
+    </div>
     <ul> <!--ul is an unordered list ol is an ordered list-->
         <li>salut</li>
         <li>salut</li>
     </ul>
+    <!-- liste ordrée -->
+    <ol>
+	    <li>Element 1</li>
+	    <li>Element 2</li>
+    </ol>
     <img scr="https://news.unil.ch/image/1664200629940.M?2022-09-26T14:02:04.000Z" alt="Image d'une feuille"> <!--terrible practice to take an image from site always have it in ur own database-->
-    <input type="text">
+    <!-- tables -->
+    <table id="aa">
+	<thead>
+		<tr>
+			<th>nom</th>
+			<th>email</th>
+			<th>age</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>George Clooney</td>
+			<td>george@me.com</td>
+			<td>eternal</td>
+		</tr>
+		<tr>
+			<td>Johnny Depp</td>
+			<td>pirates@caribbeans.com</td>
+			<td>undead (a few times)</td>
+		</tr>
+		<tr>
+			<td>Helena Boham Carter</td>
+			<td>bella@trix.com</td>
+			<td>endless</td>
+		</tr>
+	</tbody>
+    </table>
+    <div class="boxmodel">
+    <h1>boxmodel</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    </div>
 <!--want multiple texts? type p>lorem*10 and u'll get 10 lorem ipsum paragraphs-->
 <!--want to type in multiple areas at the same time? hold ur ursor and alt and click in the other spots u want to type in-->
 </body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        //ajouter un titre à la page en HTML (H1)
+        let h1 = document.createElement('h1')
+        h1.innerHTML = "helloooo!"
+        document.querySelector('body').appendChild(h1)
+        //Créer trois paragraphes et y ajouter un texte au choix
+        p= document.createElement("p");
+        p.innerHTML="I am number 1";
+        p1=document.createElement("p");
+        p1.innerHTML="I am number 2";
+        p2=document.createElement("p");
+        p2.innerHTML="I am number 3";
+        //Ajouter ces paragraphes sur la page
+        document.querySelector('body').appendChild(p);
+        document.querySelector('body').appendChild(p1);
+        document.querySelector('body').appendChild(p2);
+        //Attribuer une couleur distincte à chaque paragraphe
+        ps = document.querySelectorAll("p");
+        ps.forEach(function (p) {
+            p.style.color = "#" + Math.floor(Math.random()*16777215).toString(16);
+            });
+        
+
+        //ajoutez une image cliquable à la page (une balise "a" qui contienne une balise "img") 
+    </script>
+    
+</body>
+</html>
