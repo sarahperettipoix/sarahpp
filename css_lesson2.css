@@ -1,0 +1,99 @@
+
+h1 {color: #00FF00 /*=green*/; background-color: dodgerblue;}
+h2 {color: rgb(255,0,0)/*=red*/; background-color: orchid;}
+
+body{
+    background-color: aliceblue;
+}
+
+.endfloat{
+	clear: both;
+}
+
+.webfonts {
+	font-family: "Arial Narrow", Arial, sans-serif; 
+	background-color: peachpuff;
+	color: coral;
+	/*display: none;
+	visibility: hidden;*/
+}
+
+.webfonts h1 {
+	font-size: 200%;
+	font-variant: small-caps;
+	color: inherit;
+	background-color: inherit;
+}
+
+.webfonts h2 {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 190%;
+	text-transform: uppercase;
+	border-top: 1px solid indigo;
+	color: inherit;
+	background-color: inherit;
+}
+
+.webfonts p.monospacing {
+	color: indianred;
+	font-family: Consolas, "Lucida Console", Monaco, monospace;
+	text-align: right;
+}
+
+.boxmodel {
+	width: 40%;
+	margin: 20px 10px 10px 20px;
+	padding: 5px 4px 5px;
+	border: 1px solid darkturquoise;
+	background-color: lightcyan;
+}
+
+.boxmodel h1 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	color: darkturquoise;
+	background-color: lightcyan;
+}
+
+.boxdisplay {
+	position: absolute;
+	top: 20px;
+	right: 100px;
+	z-index: 99;
+}
+.boxdisplay2{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: ivory;
+	z-index: 100;
+}
+
+.boxdisplay2 img {
+	width: 140px;
+	float: right;
+	margin: 5px;
+	border: 1px solid silver;
+}
+
+.float {
+	width: 20%;
+	float: left;
+	color: aqua;
+	font-family: monospace;
+	border: 1px solid khaki;
+	padding: 3px;
+	box-sizing: border-box;
+}
+
+.float:hover{
+	background-color: khaki;
+}
+
+.float h1{
+	color: navajowhite;
+}
+
+#uniquechange{
+	background-color: orchid;
+}

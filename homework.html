@@ -9,21 +9,19 @@
 </head>
 <body>
     <script>
+        //ajouter a la page html (un titre 3 paragraphes et une image dans une balise)
+        function addhtml(id, type, content){
+            element = document.createElement(type)
+            element.innerHTML = content
+            element.id = id
+            document.body.appendChild(element)
+        }
         //ajouter un titre à la page en HTML (H1)
-        let h1 = document.createElement('h1')
-        h1.innerHTML = "helloooo!"
-        document.querySelector('body').appendChild(h1)
-        //Créer trois paragraphes et y ajouter un texte au choix
-        p= document.createElement("p");
-        p.innerHTML="I am number 1";
-        p1=document.createElement("p");
-        p1.innerHTML="I am number 2";
-        p2=document.createElement("p");
-        p2.innerHTML="I am number 3";
-        //Ajouter ces paragraphes sur la page
-        document.querySelector('body').appendChild(p);
-        document.querySelector('body').appendChild(p1);
-        document.querySelector('body').appendChild(p2);
+        addhtml("h1", "h1", "Better hellooo!")
+        //creer et ajouter ces paragraphes sur la page
+        addhtml("p3", "p", "hello automation" )
+        addhtml("p4", "p", "this function reduces the number of lines needed." )
+        addhtml("p5", "p", "it's simpler and better." )
         //Attribuer une couleur distincte à chaque paragraphe
         ps = document.querySelectorAll("p");
         ps.forEach(function (p) {

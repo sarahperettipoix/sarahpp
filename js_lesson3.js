@@ -110,7 +110,7 @@ function amountlinks(){
     }
 amountlinks()
 console.log("nbr of links",amountlinks())
-//for a reusable better function type in a variable taht can be changed instead of "a"
+//for a reusable better function type in a variable that can be changed instead of "a"
 //refactoring
 function amount(element){
     let n=document.querySelectorAll(element).length
@@ -149,12 +149,12 @@ monP.addEventListener("mouseover", function(f){
 })
 //recall in same function
 
-function(){
+function appple(){
     alert("salut")
 }
 () => alert("salut")
 
-function (p,r) {
+function apple2(p,r) {
     alert("salut")
     alert("yo")
 }
@@ -170,3 +170,42 @@ divs.forEach(function (div) {
 	div.style.left = "0px";
 });
 
+//declaration de tableau et afficher chaque element
+let t=[20,30,40];
+//forEach pour les executions directes sur tous les elements sinon pour transformer tout le tableau utiliser map
+t.forEach(function(valeur){
+    console.log(5);
+    document.write(valeur);
+});
+//transformation du tableau entier
+t.map(v=> v*2)
+t.map(function(v){
+    return v*2
+})
+//warning always stock inn a let variable ur changes
+//removes last element and actually transforms the table
+t.pop(); 
+
+//conditions (>, <, <=, >=, ==, !=) (and = && / or (and/or) = ||)
+let kitty=23
+if(kitty == 23 || kitty > 20){
+    //do sthg if true
+}
+
+//if and else (remember if (true){} always executes)
+myname="Marc"
+if(myname=="Marc" && myname == "Sarah"){
+}
+
+let alive= true
+let health = 30
+let recussitate = true
+if (alive){
+    if (health>20){
+        alert ("victory");
+    }
+} else if(recussitate){}
+
+for (let compteur= 0; compteur <10; compteur ++){
+    document.write(compteur)
+}
