@@ -14,22 +14,23 @@
             element = document.createElement(type)
             element.innerHTML = content
             element.id = id
+            //Attribuer une couleur distincte à chaque paragraphe
+            if (type == "p"){
+                element.style.color = "#" + Math.floor(Math.random()*16777215).toString(16);
+            }
             document.body.appendChild(element)
         }
         //ajouter un titre à la page en HTML (H1)
         addhtml("h1", "h1", "Better hellooo!")
-        //creer et ajouter ces paragraphes sur la page
+        //creer et ajouter 3 paragraphes sur la page
         addhtml("p3", "p", "hello automation" )
         addhtml("p4", "p", "this function reduces the number of lines needed." )
         addhtml("p5", "p", "it's simpler and better." )
-        //Attribuer une couleur distincte à chaque paragraphe
-        ps = document.querySelectorAll("p");
-        ps.forEach(function (p) {
-            p.style.color = "#" + Math.floor(Math.random()*16777215).toString(16);
-            });
-        
+        //ajoutez une image cliquable à la page (une balise "a" qui contienne une balise "img")
+        img1=document.createElement("img")
+        img1.src="https://www.google.com/url?sa=i&url=https%3A%2F%2Feasydrawingguides.com%2Feasy-drawing-ideas-for-beginners%2F&psig=AOvVaw1DiQ5NSs2gBWKDOCxNhWNT&ust=1667757362481000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCOjRuL_Ol_sCFQAAAAAdAAAAABAI"
+        document.body.appendChild("img")
 
-        //ajoutez une image cliquable à la page (une balise "a" qui contienne une balise "img") 
     </script>
     
 </body>
