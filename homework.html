@@ -10,22 +10,38 @@
 <body>
     <script>
         //ajouter a la page html (un titre 3 paragraphes et une image dans une balise)
-        function addhtml(id, type, content){
-            element = document.createElement(type)
-            element.innerHTML = content
-            element.id = id
+        function addhtml(id, type, content, color){
+            element = document.createElement(type);
+            element.innerHTML = content;
+            element.id = id;
             //Attribuer une couleur distincte à chaque paragraphe
-            if (type == "p"){
-                element.style.color = "#" + Math.floor(Math.random()*16777215).toString(16);
+            if (color !== undefined){
+                console.log(color)
+                if (color=="randlist"){
+                    color=randlistcolor()
+                }
+                else if (color== "random"){
+                    color= randallcolor()
+                }
+                element.style.color = color;
             }
-            document.body.appendChild(element)
+            console.log(color)
+            document.body.appendChild(element);
+        }
+        function randallcolor(){
+            return ("#" + Math.floor(Math.random()*16777215).toString(16));
+        }
+        function randlistcolor(){
+            listcolor=["black", "silver", "gray", "white", "maroon", "red", "purple", "fuchsia", "green", "lime", "olive", "yellow", "navy", "blue", "teal", "aqua", "aliceblue", "antiquewhite", "aquamarine", "azure", "beige", "bisque", "blanchedalmond", "blueviolet", "brown", "burlywood", "cadetblue", "chartreuse", "chocolate", "coral", "cornflowerblue", "cornsilk", "crimson", "cyan", "darkblue", "darkcyan", "darkgoldenrod", "darkgray", "darkgreen", "darkgrey", "darkkhaki", "darkmagenta", "darkolivegreen", "darkorange", "darkorchid", "darkred", "darksalmon", "darkseagreen", "darkslateblue", "darkslategray", "darkslategrey", "darkturquoise", "darkviolet", "deeppink", "deepskyblue", "dimgray", "dimgrey", "dodgerblue", "firebrick", "floralwhite", "forestgreen", "gainsboro", "ghostwhite", "gold", "goldenrod", "greenyellow", "grey", "honeydew", "hotpink", "indianred", "indigo", "ivory", "khaki", "lavender", "lavenderblush", "lawngreen", "lemonchiffon", "lightblue", "lightcoral", "lightcyan", "lightgoldenrodyellow", "lightgray", "lightgreen", "lightgrey", "lightpink", "lightsalmon", "lightseagreen", "lightskyblue", "lightslategray", "lightslategrey", "lightsteelblue", "lightyellow", "limegreen", "linen", "magenta", "mediumaquamarine", "mediumblue", "mediumorchid", "mediumpurple", "mediumseagreen", "mediumslateblue", "mediumspringgreen", "mediumturquoise", "mediumvioletred", "midnightblue", "mintcream", "mistyrose", "moccasin", "navajowhite", "oldlace", "olivedrab", "orangered", "orchid", "palegoldenrod", "palegreen", "paleturquoise", "palevioletred", "papayawhip", "peachpuff", "peru", "pink", "plum", "powderblue", "rosybrown", "royalblue", "saddlebrown", "salmon", "sandybrown", "seagreen", "seashell", "sienna", "skyblue", "slateblue", "slategray", "slategrey", "snow", "springgreen", "steelblue", "tan", "thistle", "tomato", "transparent", "turquoise", "violet", "wheat", "whitesmoke", "yellowgreen", "transparent"];
+            return(listcolor[Math.floor(Math.random()*(listcolor.length))])
+            //math.random returns ]0,1[
         }
         //ajouter un titre à la page en HTML (H1)
-        addhtml("h1", "h1", "Better hellooo!")
+        addhtml("h1", "h1", "Better hellooo!", "#FF00FF")
         //creer et ajouter 3 paragraphes sur la page
-        addhtml("p3", "p", "hello automation" )
-        addhtml("p4", "p", "this function reduces the number of lines needed." )
-        addhtml("p5", "p", "it's simpler and better." )
+        addhtml("p3", "p", "hello automation", "red")
+        addhtml("p4", "p", "this function reduces the number of lines needed.",  "randlist")
+        addhtml("p5", "p", "it's simpler and better.", "random")
         //ajoutez une image cliquable à la page (une balise "a" qui contienne une balise "img")
         img1=document.createElement("img")
         img1.src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
