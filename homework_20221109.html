@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        let to_do_list_increment= 0;
+        function add_input_list(){
+            let input=document.getElementById("input1").value;
+            let list_element= document.createElement("li");
+            to_do_list_increment += 1
+            list_element.id = "to_do_element_"+to_do_list_increment
+            list_element.innerHTML= input + "<a href=\"#\" onclick=\"remove_from_list('" +list_element.id +"')\">delete</a>";
+            // put a backslash before problematic characters (those that will be interpreted/control character) in strings (escaping)
+            document.getElementById("todolist1").appendChild(list_element);
+            document.getElementById("input1").value ="";
+        }
+        function remove_from_list(id_to_remove) {
+            document.getElementById(id_to_remove).remove()
+        }
+    </script>
 </head>
 <body>
-    
+    <input type="text" id="input1">
+    <button onclick="add_input_list()">add</button>
+    <ul id="todolist1"></ul>
 </body>
 </html>
