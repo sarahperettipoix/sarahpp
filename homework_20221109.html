@@ -12,13 +12,19 @@
             let list_element= document.createElement("li");
             to_do_list_increment += 1
             list_element.id = "to_do_element_"+to_do_list_increment
-            list_element.innerHTML= input + "<a href=\"#\" onclick=\"remove_from_list('" +list_element.id +"')\">delete</a>";
+            list_element.innerHTML= input + "<a href=\"#\" onclick=\"remove_from_list('" +list_element.id +"')\"> delete </a>" + "<a href=\"#\" onclick=\"strike_through_list('" +list_element.id +"')\"> done </a>" + "<a href=\"#\" onclick=\"edit_list('" +list_element.id +"')\"> edit</a>";
             // put a backslash before problematic characters (those that will be interpreted/control character) in strings (escaping)
             document.getElementById("todolist1").appendChild(list_element);
             document.getElementById("input1").value ="";
         }
         function remove_from_list(id_to_remove) {
             document.getElementById(id_to_remove).remove()
+        }
+        function strike_through_list(id_to_strike_through){
+            document.getElementById(id_to_strike_through).style.textDecoration = "line-through"    
+        }
+        function edit_list(id_to_edit){
+            document.getElementById(id_to_edit).replaceWith(add_input_list())
         }
     </script>
 </head>
